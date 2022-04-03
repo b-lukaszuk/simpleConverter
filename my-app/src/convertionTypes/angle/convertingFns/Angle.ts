@@ -27,36 +27,37 @@ class Angle {
         return this._negative ? (1 - this._turns) : this._turns;
     }
 
-    public set degrees(degrees: number) {
-        this._setInternals(d2t(degrees));
+    public setAngleInUnits(angle: number, units: string): void {
+        if (units === "gradians") {
+            this._setInternals(g2t(angle));
+        }
+        else if (units === "mils") {
+            this._setInternals(m2t(angle));
+        }
+        else if (units === "radians") {
+            this._setInternals(r2t(angle));
+        }
+        else if (units === "degrees") {
+            this._setInternals(d2t(angle));
+        }
     }
 
-    public get degrees(): number {
-        return t2d(this._getTurns());
-    }
-
-    public set gradians(gradians: number) {
-        this._setInternals(g2t(gradians));
-    }
-
-    public get gradians(): number {
-        return t2g(this._getTurns());
-    }
-
-    public set mils(mils: number) {
-        this._setInternals(m2t(mils));
-    }
-
-    public get mils(): number {
-        return t2m(this._getTurns());
-    }
-
-    public set radians(radians: number) {
-        this._setInternals(r2t(radians));
-    }
-
-    public get radians(): number {
-        return t2r(this._getTurns());
+    public getAngleInUnits(units: string): number {
+        if (units === "gradians") {
+            return t2g(this._getTurns());
+        }
+        else if (units === "mils") {
+            return t2m(this._getTurns());
+        }
+        else if (units === "radians") {
+            return t2r(this._getTurns());
+        }
+        else if (units === "degrees") {
+            return t2d(this._getTurns());
+        }
+        else {
+            return NaN;
+        }
     }
 }
 
