@@ -55,6 +55,9 @@ class Angle {
         else if (units === "degrees") {
             return t2d(this._getTurns());
         }
+        else if (units === "turns") {
+            return this._getTurns();
+        }
         else {
             return NaN;
         }
