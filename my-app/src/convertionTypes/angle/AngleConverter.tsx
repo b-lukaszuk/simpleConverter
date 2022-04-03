@@ -45,7 +45,7 @@ const AngleConverter: React.FC = () => {
         return (
             <p key={unit.id}>
                 {" "}
-                {turns2units(angleTurns, unit.unit).toFixed(2)} {unit.unit}
+                {turns2units(angleTurns, unit.unit).toFixed(2)} [{unit.unit}]
             </p>
         );
     };
