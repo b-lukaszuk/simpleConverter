@@ -7,7 +7,7 @@ const App: React.FC = () => {
         <div className="App">
             <p>Simple Converter</p>
             <p>No guarantee of correct conversion</p>
-            <p>Although it should world fine</p>
+            <p>(Although it should work just fine)</p>
             <AngleConverter />
         </div>
     );
