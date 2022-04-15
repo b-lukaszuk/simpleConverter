@@ -20,7 +20,7 @@ function k2f(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return (kelvin * (9 / 5) - 459.67);
+        return kelvin * (9 / 5) - 459.67;
     }
 }
 
