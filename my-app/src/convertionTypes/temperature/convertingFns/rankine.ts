@@ -10,7 +10,7 @@ function ra2k(rankine: number): number {
     if (isOutOfRange(rankine, RANKINEMIN, RANKINEMAX)) {
         return NaN;
     } else {
-        return ((rankine * (5 / 9)));
+        return rankine * (5 / 9);
     }
 }
 
