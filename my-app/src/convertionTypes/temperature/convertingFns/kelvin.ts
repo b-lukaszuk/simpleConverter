@@ -11,7 +11,7 @@ function k2c(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return (kelvin - 273.15);
+        return kelvin - 273.15;
     }
 }
 
@@ -29,7 +29,7 @@ function k2ra(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return (kelvin * (9 / 5));
+        return kelvin * (9 / 5);
     }
 }
 
@@ -38,7 +38,7 @@ function k2d(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return ((373.15 - kelvin) * (3 / 2));
+        return (373.15 - kelvin) * (3 / 2);
     }
 }
 
@@ -47,7 +47,7 @@ function k2n(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return ((kelvin - 273.15) * 33 / 100);
+        return (kelvin - 273.15) * 33 / 100;
     }
 }
 
@@ -56,7 +56,7 @@ function k2re(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return ((kelvin - 273.15) * (4 / 5));
+        return (kelvin - 273.15) * (4 / 5);
     }
 }
 
@@ -65,7 +65,7 @@ function k2ro(kelvin: number): number {
     if (isOutOfRange(kelvin, KELVINMAX, KELVINMAX)) {
         return NaN;
     } else {
-        return ((kelvin - 273.15) * (21 / 40) + 7.5);
+        return (kelvin - 273.15) * (21 / 40) + 7.5;
     }
 }
 
