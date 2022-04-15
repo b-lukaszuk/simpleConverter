@@ -10,7 +10,7 @@ function f2k(fahrenheit: number): number {
     if (isOutOfRange(fahrenheit, FAHRENHEITMIN, FAHRENHEITMAX)) {
         return NaN;
     } else {
-        return ((fahrenheit + 459.67) * (5 / 9));
+        return (fahrenheit + 459.67) * (5 / 9);
     }
 }
 

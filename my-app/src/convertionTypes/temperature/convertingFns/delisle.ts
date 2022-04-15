@@ -11,7 +11,7 @@ function d2k(delisle: number): number {
     if (isOutOfRange(delisle, DELISLEMIN, DELISLEMAX)) {
         return NaN;
     } else {
-        return (373.15 - delisle * (2 / 3));
+        return 373.15 - delisle * (2 / 3);
     }
 }
 

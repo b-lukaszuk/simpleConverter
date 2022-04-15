@@ -11,7 +11,7 @@ function c2k(celsius: number): number {
     if (isOutOfRange(celsius, CELSIUSMIN, CELSIUSMAX)) {
         return NaN;
     } else {
-        return (celsius + 273.15);
+        return celsius + 273.15;
     }
 }
 
