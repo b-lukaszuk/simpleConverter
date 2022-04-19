@@ -6,7 +6,7 @@ interface unitsChoice {
     unit: string;
 }
 
-const AngleConverter: React.FC = () => {
+const AngleConverter: React.FC = (): ReactElement<HTMLElement> => {
     const [input, setInput] = useState("0");
     const [inUnits, setInUnits] = useState("degrees");
     const [angleTurns, setAngleTurns] = useState(0);
