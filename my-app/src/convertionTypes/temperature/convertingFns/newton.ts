@@ -1,4 +1,4 @@
-import isOutOfRange from "./isOutOfRange";
+import { convertIfInRange } from "./convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2c } from "./kelvin";
 
 const NEWTONMIN: number = k2c(KELVINMIN); // absolute zero
@@ -8,11 +8,9 @@ const NEWTONMAX: number = k2c(KELVINMAX);
 
 function n2k(newton: number): number {
     // to kelvin
-    if (isOutOfRange(newton, NEWTONMIN, NEWTONMAX)) {
-        return NaN;
-    } else {
-        return newton * (100 / 33) + 273.15;
-    }
+    return convertIfInRange(newton,
+        (n: number): number => n * (100 / 33) + 273.15,
+        NEWTONMIN, NEWTONMAX);
 }
 
 export { n2k };

@@ -1,4 +1,4 @@
-import isOutOfRange from "./isOutOfRange";
+import { convertIfInRange } from "./convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2c } from "./kelvin";
 
 const CELSIUSMIN: number = k2c(KELVINMIN); // absolute zero
@@ -8,11 +8,9 @@ const CELSIUSMAX: number = k2c(KELVINMAX);
 
 function c2k(celsius: number): number {
     // to kelvin
-    if (isOutOfRange(celsius, CELSIUSMIN, CELSIUSMAX)) {
-        return NaN;
-    } else {
-        return celsius + 273.15;
-    }
+    return convertIfInRange(celsius,
+        (c: number): number => c + 273.15,
+        CELSIUSMIN, CELSIUSMAX);
 }
 
 export { c2k };

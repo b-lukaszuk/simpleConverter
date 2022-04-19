@@ -1,4 +1,4 @@
-import isOutOfRange from "./isOutOfRange";
+import { convertIfInRange } from "./convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2c } from "./kelvin";
 
 const REAUMURMIN: number = k2c(KELVINMIN); // absolute zero
@@ -8,11 +8,9 @@ const REAUMURMAX: number = k2c(KELVINMAX);
 
 function re2k(reaumur: number): number {
     // to kelvin
-    if (isOutOfRange(reaumur, REAUMURMIN, REAUMURMAX)) {
-        return NaN;
-    } else {
-        return reaumur * (5 / 4) + 273.15;
-    }
+    return convertIfInRange(reaumur,
+        (re: number): number => re * (5 / 4) + 273.15,
+        REAUMURMIN, REAUMURMAX);
 }
 
 export { re2k };

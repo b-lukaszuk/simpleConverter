@@ -1,4 +1,4 @@
-import isOutOfRange from "./isOutOfRange";
+import { convertIfInRange } from "./convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2f } from "./kelvin";
 const FAHRENHEITMIN: number = k2f(KELVINMIN); // absolute zero
 // max is: Plank-Temperature = Math.pow(10, 32) Kelvin
@@ -7,11 +7,9 @@ const FAHRENHEITMAX: number = k2f(KELVINMAX);
 
 function f2k(fahrenheit: number): number {
     // to kelvin
-    if (isOutOfRange(fahrenheit, FAHRENHEITMIN, FAHRENHEITMAX)) {
-        return NaN;
-    } else {
-        return (fahrenheit + 459.67) * (5 / 9);
-    }
+    return convertIfInRange(fahrenheit,
+        (f: number): number => (f + 459.67) * (5 / 9),
+        FAHRENHEITMIN, FAHRENHEITMAX);
 }
 
 export { f2k };

@@ -1,4 +1,4 @@
-import isOutOfRange from "./isOutOfRange";
+import { convertIfInRange } from "./convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2c } from "./kelvin";
 
 const DELISLEMIN: number = k2c(KELVINMIN); // absolute zero
@@ -8,11 +8,9 @@ const DELISLEMAX: number = k2c(KELVINMAX);
 
 function d2k(delisle: number): number {
     // to kelvin
-    if (isOutOfRange(delisle, DELISLEMIN, DELISLEMAX)) {
-        return NaN;
-    } else {
-        return 373.15 - delisle * (2 / 3);
-    }
+    return convertIfInRange(delisle,
+        (d: number): number => 373.15 - d * (2 / 3),
+        DELISLEMIN, DELISLEMAX);
 }
 
 export { d2k };

@@ -1,4 +1,4 @@
-import isOutOfRange from "./isOutOfRange";
+import { convertIfInRange } from "./convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2c } from "./kelvin";
 
 const ROMERMIN: number = k2c(KELVINMIN); // absolute zero
@@ -8,11 +8,9 @@ const ROMERMAX: number = k2c(KELVINMAX);
 
 function ro2k(romer: number): number {
     // to kelvin
-    if (isOutOfRange(romer, ROMERMIN, ROMERMAX)) {
-        return NaN;
-    } else {
-        return (romer - 7.5) * (40 / 21) + 273.15;
-    }
+    return convertIfInRange(romer,
+        (ro: number): number => (ro - 7.5) * (40 / 21) + 273.15,
+        ROMERMIN, ROMERMAX);
 }
 
 export { ro2k };
