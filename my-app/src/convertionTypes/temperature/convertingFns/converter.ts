@@ -23,6 +23,8 @@ function kelvin2units(howMany: number, units: string): number {
             return re2k(howMany);
         case "romer":
             return ro2k(howMany);
+        case "kelvin":
+            return howMany;
         default:
             return NaN;
     }
@@ -44,6 +46,8 @@ function units2kelvin(howMany: number, units: string): number {
             return k2re(howMany);
         case "romer":
             return k2ro(howMany);
+        case "kelvin":
+            return howMany;
         default:
             return NaN;
     }
