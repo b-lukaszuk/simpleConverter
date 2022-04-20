@@ -1,30 +1,26 @@
 import React, { ReactElement, useEffect, useState } from "react";
-import { turns2units, units2turns } from "./convertingFns/converter";
+import getOption from "../utils/getOption";
 
 interface unitsChoice {
     id: number;
     unit: string;
 }
 
-const AngleConverter: React.FC = (): ReactElement<HTMLElement> => {
+interface Props {
+    units: unitsChoice[],
+    main2secondary: Function,
+    secondary2main: Function,
+}
+
+const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
+
+    const units: unitsChoice[] = props.units;
+    const main2secondary: Function = props.main2secondary;
+    const secondary2main: Function = props.secondary2main;
+
     const [input, setInput] = useState("0");
-    const [inUnits, setInUnits] = useState("degrees");
-    const [angleTurns, setAngleTurns] = useState(0);
-
-    const units: unitsChoice[] = [
-        { id: 0, unit: "degrees" },
-        { id: 1, unit: "gradians" },
-        { id: 2, unit: "mils" },
-        { id: 3, unit: "radians" },
-    ];
-
-    const getOption = (unit: unitsChoice): ReactElement<HTMLElement> => {
-        return (
-            <option key={unit.id} value={unit.unit}>
-                {unit.unit}
-            </option>
-        );
-    };
+    const [inUnits, setInUnits] = useState(units[0].unit);
+    const [howManyMainUnits, setHowManyMainUnits] = useState(0);
 
     const handleTyping = (event: React.ChangeEvent<HTMLInputElement>): void => {
         setInput(event.target.value);
@@ -36,16 +32,16 @@ const AngleConverter: React.FC = (): ReactElement<HTMLElement> => {
 
     useEffect(() => {
         const handleConversion = (): void => {
-            setAngleTurns(units2turns(parseFloat(input), inUnits));
+            setHowManyMainUnits(secondary2main(parseFloat(input), inUnits));
         };
         handleConversion();
-    }, [angleTurns, input, inUnits]);
+    }, [howManyMainUnits, secondary2main, input, inUnits]);
 
     const getOutput = (unit: unitsChoice): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
                 {" "}
-                {turns2units(angleTurns, unit.unit).toFixed(2)} [{unit.unit}]
+                {main2secondary(howManyMainUnits, unit.unit).toFixed(2)} [{unit.unit}]
             </p>
         );
     };
@@ -66,4 +62,4 @@ const AngleConverter: React.FC = (): ReactElement<HTMLElement> => {
     );
 };
 
-export default AngleConverter;
+export default Converter;

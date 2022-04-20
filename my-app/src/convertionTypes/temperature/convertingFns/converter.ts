@@ -7,6 +7,11 @@ import { ra2k } from "./rankine";
 import { re2k } from "./reaumur";
 import { ro2k } from "./romer";
 
+interface unitsChoice {
+    id: number;
+    unit: string;
+}
+
 function kelvin2units(howMany: number, units: string): number {
     switch (units) {
         case "celsius":
@@ -53,4 +58,15 @@ function units2kelvin(howMany: number, units: string): number {
     }
 }
 
-export { kelvin2units, units2kelvin };
+const temperatureUnits: unitsChoice[] = [
+    { id: 0, unit: "celsius" },
+    { id: 1, unit: "delisle" },
+    { id: 2, unit: "fahrenheit" },
+    { id: 3, unit: "kelvin" },
+    { id: 4, unit: "newton" },
+    { id: 5, unit: "rankine" },
+    { id: 6, unit: "reaumur" },
+    { id: 7, unit: "romer" },
+]
+
+export { kelvin2units, units2kelvin, temperatureUnits };
