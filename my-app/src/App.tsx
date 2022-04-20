@@ -31,7 +31,8 @@ const App: React.FC = () => {
         <div className="App">
             <h1>Simple Converter</h1>
             <p className="warning">No guarantee of correct conversion</p>
-            <p>(Although it should work just fine)</p>
+            <p className="warning">Use it at your own risk</p>
+            <p>(Although it should work fine)</p>
             <hr />
             <p>Select conversion type:</p>
             <select value={convChoice} onChange={handleConvertionChange}>
@@ -42,6 +43,7 @@ const App: React.FC = () => {
                 units={config[convChoice as keyof typeof config].units}
                 main2secondary={config[convChoice as keyof typeof config].main2secondary}
                 secondary2main={config[convChoice as keyof typeof config].secondary2main}
+                additionalInfo={config[convChoice as keyof typeof config].additionalInfo}
             />
         </div>
     );

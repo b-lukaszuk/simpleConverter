@@ -11,6 +11,7 @@ interface Props {
     units: unitsChoice[],
     main2secondary: Function,
     secondary2main: Function,
+    additionalInfo: string,
 }
 
 const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
@@ -18,6 +19,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
     const units: unitsChoice[] = props.units;
     const main2secondary: Function = props.main2secondary;
     const secondary2main: Function = props.secondary2main;
+    const additionalInfo: string = props.additionalInfo;
 
     const [input, setInput] = useState("0");
     const [inUnits, setInUnits] = useState(units[0].unit);
@@ -69,6 +71,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
             <select value={inUnits} onChange={handleOption}>
                 {units.map((unit) => getOption(unit))}
             </select>
+            <p>{additionalInfo}</p>
             <h2>&#187;</h2>
             <div>{units.map((u) => getOutput(u))}</div>
         </div>

@@ -24,4 +24,6 @@ const angleUnits: unitsChoice[] = [
     { id: 4, unit: "turn" },
 ]
 
-export { turns2units, units2turns, angleUnits };
+const angleInfo: string = "limit 0-1 [turn], both sides (-/+), rounds up";
+
+export { turns2units, units2turns, angleUnits, angleInfo };

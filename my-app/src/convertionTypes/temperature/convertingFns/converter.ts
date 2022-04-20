@@ -69,4 +69,6 @@ const temperatureUnits: unitsChoice[] = [
     { id: 7, unit: "romer" },
 ]
 
-export { kelvin2units, units2kelvin, temperatureUnits };
+const temperatureInfo: string = "limit 0-1e8 [kelvin]";
+
+export { kelvin2units, units2kelvin, temperatureUnits, temperatureInfo };
