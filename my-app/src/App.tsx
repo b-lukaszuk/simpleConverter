@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import "./App.css";
 import Converter from "./convertionTypes/Converter";
 import config from "./config/config";
@@ -9,7 +9,7 @@ interface unitsChoice {
     unit: string;
 }
 
-const App: React.FC = () => {
+const App: React.FC = (): ReactElement<HTMLElement> => {
     const getConvertionChoices = (config: Object): unitsChoice[] => {
         let result: unitsChoice[] = [];
         let keys: string[] = Object.keys(config);
