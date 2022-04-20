@@ -13,14 +13,15 @@ function turns2units(howMany: number, units: string): number {
 function units2turns(howMany: number, units: string): number {
     let angle: Angle = new Angle(0);
     angle.setAngleInUnits(howMany, units);
-    return angle.getAngleInUnits("turns");
+    return angle.getAngleInUnits("turn");
 }
 
 const angleUnits: unitsChoice[] = [
-    { id: 0, unit: "degrees" },
-    { id: 1, unit: "gradians" },
-    { id: 2, unit: "mils" },
-    { id: 3, unit: "radians" },
+    { id: 0, unit: "degree" },
+    { id: 1, unit: "gradian" },
+    { id: 2, unit: "mil" },
+    { id: 3, unit: "radian" },
+    { id: 4, unit: "turn" },
 ]
 
 export { turns2units, units2turns, angleUnits };

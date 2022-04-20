@@ -28,37 +28,31 @@ class Angle {
     }
 
     public setAngleInUnits(angle: number, units: string): void {
-        if (units === "gradians") {
+        if (units === "gradian") {
             this._setInternals(g2t(angle));
-        }
-        else if (units === "mils") {
+        } else if (units === "mil") {
             this._setInternals(m2t(angle));
-        }
-        else if (units === "radians") {
+        } else if (units === "radian") {
             this._setInternals(r2t(angle));
-        }
-        else if (units === "degrees") {
+        } else if (units === "degree") {
             this._setInternals(d2t(angle));
+        } else if (units === "turn") {
+            this._setInternals(angle);
         }
     }
 
     public getAngleInUnits(units: string): number {
-        if (units === "gradians") {
+        if (units === "gradian") {
             return t2g(this._getTurns());
-        }
-        else if (units === "mils") {
+        } else if (units === "mil") {
             return t2m(this._getTurns());
-        }
-        else if (units === "radians") {
+        } else if (units === "radian") {
             return t2r(this._getTurns());
-        }
-        else if (units === "degrees") {
+        } else if (units === "degree") {
             return t2d(this._getTurns());
-        }
-        else if (units === "turns") {
+        } else if (units === "turn") {
             return this._getTurns();
-        }
-        else {
+        } else {
             return NaN;
         }
     }
