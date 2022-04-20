@@ -37,6 +37,15 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         handleConversion();
     }, [howManyMainUnits, secondary2main, input, inUnits]);
 
+    useEffect(() => {
+        const setDefaults = (): void => {
+            setInput("0");
+            setHowManyMainUnits(0);
+            setInUnits(units[0].unit);
+        }
+        setDefaults();
+    }, [units])
+
     const getOutput = (unit: unitsChoice): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
