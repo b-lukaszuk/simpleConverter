@@ -1,5 +1,6 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import getOption from "../utils/getOption";
+import "./Converter.css"
 
 interface unitsChoice {
     id: number;
@@ -50,22 +51,25 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
                 {" "}
-                {main2secondary(howManyMainUnits, unit.unit).toFixed(2)} [{unit.unit}]
+                {main2secondary(howManyMainUnits, unit.unit).toFixed(4)} [{unit.unit}]
             </p>
         );
     };
 
     return (
         <div>
-            <input name="" type="text" value={input} onChange={handleTyping} />
-            <br /> <br />
-            <form>
-                &nbsp; &nbsp;
-                <select value={inUnits} onChange={handleOption}>
-                    {units.map((unit) => getOption(unit))}
-                </select>
-            </form>
-            <h1>&#187;</h1>
+            <hr />
+            <p>Type some number (allowed chars: digits, period, -, +)</p>
+            <input
+                pattern="[-+]{0,1}[0-9]+\.{0,1}[0-9]{0,}"
+                placeholder="0.00"
+                name="" type="text" value={input} onChange={handleTyping} />
+            <p>(red border: incorrect input that may produce incorrect output)</p>
+            <p>Choose input units:</p>
+            <select value={inUnits} onChange={handleOption}>
+                {units.map((unit) => getOption(unit))}
+            </select>
+            <h2>&#187;</h2>
             <div>{units.map((u) => getOutput(u))}</div>
         </div>
     );

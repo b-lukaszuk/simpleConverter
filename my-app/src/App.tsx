@@ -29,14 +29,15 @@ const App: React.FC = () => {
 
     return (
         <div className="App">
-            <p>Simple Converter</p>
-            <p>No guarantee of correct conversion</p>
+            <h1>Simple Converter</h1>
+            <p className="warning">No guarantee of correct conversion</p>
             <p>(Although it should work just fine)</p>
-            <p>Select converstion type:</p>
+            <hr />
+            <p>Select conversion type:</p>
             <select value={convChoice} onChange={handleConvertionChange}>
                 {convertions.map((convertion) => getOption(convertion))}
             </select>
-            <br /><br />
+            <br /> <br />
             <Converter
                 units={config[convChoice as keyof typeof config].units}
                 main2secondary={config[convChoice as keyof typeof config].main2secondary}
