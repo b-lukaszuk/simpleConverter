@@ -6,11 +6,7 @@ import { n2k } from "./newton";
 import { ra2k } from "./rankine";
 import { re2k } from "./reaumur";
 import { ro2k } from "./romer";
-
-interface unitsChoice {
-    id: number;
-    unit: string;
-}
+import selectChoice from "../../../interfaces/selectChoice";
 
 function kelvin2units(howMany: number, units: string): number {
     switch (units) {
@@ -58,17 +54,17 @@ function units2kelvin(howMany: number, units: string): number {
     }
 }
 
-const temperatureUnits: unitsChoice[] = [
-    { id: 0, unit: "celsius" },
-    { id: 1, unit: "delisle" },
-    { id: 2, unit: "fahrenheit" },
-    { id: 3, unit: "kelvin" },
-    { id: 4, unit: "newton" },
-    { id: 5, unit: "rankine" },
-    { id: 6, unit: "reaumur" },
-    { id: 7, unit: "romer" },
+const temperatureUnits: selectChoice[] = [
+    { id: 0, name: "celsius" },
+    { id: 1, name: "delisle" },
+    { id: 2, name: "fahrenheit" },
+    { id: 3, name: "kelvin" },
+    { id: 4, name: "newton" },
+    { id: 5, name: "rankine" },
+    { id: 6, name: "reaumur" },
+    { id: 7, name: "romer" },
 ]
 
-const temperatureInfo: string = "limit: 0-1e8 [kelvin]";
+const temperatureInfo: string = "limit: 0-1e8 [kelvin], in Physics: 0-Math.pow(10,32) [kelvin]";
 
 export { kelvin2units, units2kelvin, temperatureUnits, temperatureInfo };

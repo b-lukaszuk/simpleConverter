@@ -1,28 +1,25 @@
 import React, { ReactElement, useEffect, useState } from "react";
-import getOption from "../utils/getOption";
-import "./Converter.css"
 
-interface unitsChoice {
-    id: number;
-    unit: string;
-}
+import getOption from "../utils/getOption";
+import selectChoice from "../interfaces/selectChoice";
+
+import "./Converter.css";
 
 interface Props {
-    units: unitsChoice[],
-    main2secondary: Function,
-    secondary2main: Function,
-    additionalInfo: string,
+    units: selectChoice[];
+    main2secondary: Function;
+    secondary2main: Function;
+    additionalInfo: string;
 }
 
 const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
-
-    const units: unitsChoice[] = props.units;
+    const units: selectChoice[] = props.units;
     const main2secondary: Function = props.main2secondary;
     const secondary2main: Function = props.secondary2main;
     const additionalInfo: string = props.additionalInfo;
 
     const [input, setInput] = useState("0");
-    const [inUnits, setInUnits] = useState(units[0].unit);
+    const [inUnits, setInUnits] = useState(units[0].name);
     const [howManyMainUnits, setHowManyMainUnits] = useState(0);
 
     const handleTyping = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -44,16 +41,16 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         const setDefaults = (): void => {
             setInput("0");
             setHowManyMainUnits(0);
-            setInUnits(units[0].unit);
-        }
+            setInUnits(units[0].name);
+        };
         setDefaults();
-    }, [units])
+    }, [units]);
 
-    const getOutput = (unit: unitsChoice): ReactElement<HTMLElement> => {
+    const getOutput = (unit: selectChoice): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
                 {" "}
-                {main2secondary(howManyMainUnits, unit.unit).toFixed(4)} [{unit.unit}]
+                {main2secondary(howManyMainUnits, unit.name).toFixed(4)} [{unit.name}]
             </p>
         );
     };
@@ -65,7 +62,11 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
             <input
                 pattern="[-+]{0,1}[0-9]+\.{0,1}[0-9]{0,}"
                 placeholder="0.00"
-                name="" type="text" value={input} onChange={handleTyping} />
+                name=""
+                type="text"
+                value={input}
+                onChange={handleTyping}
+            />
             <p>(red border: incorrect input that may produce incorrect output)</p>
             <p>Choose input units:</p>
             <select value={inUnits} onChange={handleOption}>

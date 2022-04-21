@@ -1,14 +1,10 @@
 import { ReactElement } from "react";
+import selectChoice from "../interfaces/selectChoice";
 
-interface unitsChoice {
-    id: number;
-    unit: string;
-}
-
-const getOption = (unit: unitsChoice): ReactElement<HTMLElement> => {
+const getOption = (unit: selectChoice): ReactElement<HTMLElement> => {
     return (
-        <option key={unit.id} value={unit.unit}>
-            {unit.unit}
+        <option key={unit.id} value={unit.name}>
+            {unit.name}
         </option>
     );
 };

@@ -1,25 +1,25 @@
 import React, { ReactElement, useState } from "react";
-import "./App.css";
+
 import Converter from "./convertionTypes/Converter";
 import config from "./config/config";
 import getOption from "./utils/getOption";
+import selectChoice from "./interfaces/selectChoice";
 
-interface unitsChoice {
-    id: number;
-    unit: string;
-}
+import "./App.css";
 
 const App: React.FC = (): ReactElement<HTMLElement> => {
-    const getConvertionChoices = (config: Object): unitsChoice[] => {
-        let result: unitsChoice[] = [];
+    const getConvertionChoices = (config: Object): selectChoice[] => {
+        let result: selectChoice[] = [];
         let keys: string[] = Object.keys(config);
         for (let i = 0; i < keys.length; i++) {
-            result.push({ id: i, unit: keys[i] });
+            result.push({ id: i, name: keys[i] });
         }
         return result;
     };
-    const convertions: unitsChoice[] = getConvertionChoices(config);
-    const [convChoice, setConvChoice]: [string, Function] = useState(convertions[0].unit);
+    const convertions: selectChoice[] = getConvertionChoices(config);
+    const [convChoice, setConvChoice]: [string, Function] = useState(
+        convertions[0].name
+    );
 
     const handleConvertionChange = (
         event: React.ChangeEvent<HTMLSelectElement>
@@ -41,9 +41,15 @@ const App: React.FC = (): ReactElement<HTMLElement> => {
             <br /> <br />
             <Converter
                 units={config[convChoice as keyof typeof config].units}
-                main2secondary={config[convChoice as keyof typeof config].main2secondary}
-                secondary2main={config[convChoice as keyof typeof config].secondary2main}
-                additionalInfo={config[convChoice as keyof typeof config].additionalInfo}
+                main2secondary={
+                    config[convChoice as keyof typeof config].main2secondary
+                }
+                secondary2main={
+                    config[convChoice as keyof typeof config].secondary2main
+                }
+                additionalInfo={
+                    config[convChoice as keyof typeof config].additionalInfo
+                }
             />
         </div>
     );
