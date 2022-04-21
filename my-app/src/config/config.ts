@@ -3,7 +3,7 @@ import {
     units2turns,
     angleUnits,
     angleInfo,
-} from "../convertionTypes/angle/convertingFns/converter";
+} from "../convertionTypes/angle/converter";
 import {
     kelvin2units,
     units2kelvin,

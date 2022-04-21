@@ -1,5 +1,5 @@
 import Angle from "./Angle";
-import selectChoice from "../../../interfaces/selectChoice";
+import selectChoice from "../../interfaces/selectChoice";
 
 function turns2units(howMany: number, units: string): number {
     let angle: Angle = new Angle(howMany);
