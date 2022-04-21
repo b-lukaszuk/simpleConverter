@@ -9,7 +9,7 @@ import {
     units2kelvin,
     temperatureUnits,
     temperatureInfo,
-} from "../convertionTypes/temperature/convertingFns/converter";
+} from "../convertionTypes/temperature/converter";
 
 const config = {
     angle: {

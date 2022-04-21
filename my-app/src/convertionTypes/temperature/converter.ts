@@ -6,7 +6,7 @@ import { n2k } from "./newton";
 import { ra2k } from "./rankine";
 import { re2k } from "./reaumur";
 import { ro2k } from "./romer";
-import selectChoice from "../../../interfaces/selectChoice";
+import selectChoice from "../../interfaces/selectChoice";
 
 function kelvin2units(howMany: number, units: string): number {
     switch (units) {
