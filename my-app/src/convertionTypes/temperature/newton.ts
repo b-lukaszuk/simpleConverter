@@ -1,4 +1,4 @@
-import { convertIfInRange } from "./convertIfInRange";
+import { convertIfInRange } from "../../utils/convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2c } from "./kelvin";
 
 const NEWTONMIN: number = k2c(KELVINMIN); // absolute zero

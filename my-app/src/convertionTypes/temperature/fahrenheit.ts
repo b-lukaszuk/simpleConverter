@@ -1,4 +1,4 @@
-import { convertIfInRange } from "./convertIfInRange";
+import { convertIfInRange } from "../../utils/convertIfInRange";
 import { KELVINMIN, KELVINMAX, k2f } from "./kelvin";
 const FAHRENHEITMIN: number = k2f(KELVINMIN); // absolute zero
 // max is: Plank-Temperature = Math.pow(10, 32) Kelvin

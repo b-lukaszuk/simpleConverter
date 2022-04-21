@@ -1,13 +1,13 @@
 import isOutOfRange from "./isOutOfRange";
 
-function convertIfInRange(kelvin: number,
+function convertIfInRange(someNum: number,
     converter: Function,
     minIncl: number,
     maxIncl: number): number {
-    if (isOutOfRange(kelvin, minIncl, maxIncl)) {
+    if (isOutOfRange(someNum, minIncl, maxIncl)) {
         return NaN;
     } else {
-        return converter(kelvin);
+        return converter(someNum);
     }
 }
 

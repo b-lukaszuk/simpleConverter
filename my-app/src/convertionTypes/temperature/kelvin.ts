@@ -1,4 +1,4 @@
-import { convertIfInRange } from "./convertIfInRange";
+import { convertIfInRange } from "../../utils/convertIfInRange";
 
 const KELVINMIN: number = 0; // absolute zero
 // max is: Plank-Temperature = Math.pow(10, 32) Kelvin
