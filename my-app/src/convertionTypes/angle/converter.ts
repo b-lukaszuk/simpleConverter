@@ -20,6 +20,6 @@ const angleUnits: selectChoice[] = [
     { id: 4, name: "turn" },
 ]
 
-const angleInfo: string = "limit: 0-1 [turn], both sides (-/+), units wrap up";
+const angleInfo: string = "limit: 0-1 [turn], both sides (-/+), angles wrap around 1 [turn]";
 
 export { turns2units, units2turns, angleUnits, angleInfo };
