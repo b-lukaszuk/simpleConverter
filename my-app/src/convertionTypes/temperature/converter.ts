@@ -65,6 +65,6 @@ const temperatureUnits: selectChoice[] = [
     { id: 7, name: "romer" },
 ]
 
-const temperatureInfo: string = "limit: 0-1e8 [kelvin], in Physics: 0-Math.pow(10,32) [kelvin]";
+const temperatureInfo: string = "limit: 0-1e8 [kelvin], limit in Physics: 0-Math.pow(10,32) [kelvin]";
 
 export { kelvin2units, units2kelvin, temperatureUnits, temperatureInfo };
