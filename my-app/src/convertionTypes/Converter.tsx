@@ -62,6 +62,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
             <input
                 pattern="[-+]{0,1}[0-9]+\.{0,1}[0-9]{0,}"
                 placeholder="0.00"
+                maxLength={15}
                 name=""
                 type="text"
                 value={input}
