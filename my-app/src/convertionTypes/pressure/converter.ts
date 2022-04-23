@@ -40,7 +40,7 @@ function units2pascal(howMany: number, units: string): number {
     }
 }
 
-const pressureInfo: string = "limit: 0-1e8 [pascal], [torr] == [mmHg]";
+const pressureInfo: string = "limit: 0-1e12 [pascal], [torr] == [mmHg]";
 
 const pressureUnits: selectChoice[] = [
     { id: 0, name: "atm" },

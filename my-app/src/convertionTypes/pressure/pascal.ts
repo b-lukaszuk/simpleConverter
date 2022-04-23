@@ -1,7 +1,7 @@
 import { convertIfInRange } from "../../utils/convertIfInRange";
 
 const PASCALMIN: number = 0;
-const PASCALMAX: number = 1e8;
+const PASCALMAX: number = 1e12;
 
 // convertions determined based on info found on en.wikipedia.org
 // e.g. here -> https://en.wikipedia.org/wiki/Torr#Conversion_factors
