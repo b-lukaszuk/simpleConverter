@@ -26,11 +26,12 @@ Deployment based on tips from [There](https://dev.to/yuribenjamin/how-to-deploy-
 
 Available convertion types:
 - angle
+- pressure
 - temperature
 
 ## Additional Info
 
 Innitially inspired by [This page](https://rosettacode.org/wiki/Angles_(geometric),_normalization_and_conversion) of [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
 
-Initial solution at [my github]https://github.com/b-lukaszuk/ts_js_luzne_zadanka/tree/main/part3_Mar_2022/task1)
+Initial solution at [my github](https://github.com/b-lukaszuk/ts_js_luzne_zadanka/tree/main/part3_Mar_2022/task1)
 
