@@ -4,6 +4,14 @@ import {
     angleUnits,
     angleInfo,
 } from "../convertionTypes/angle/converter";
+
+import {
+    pascal2units,
+    units2pascal,
+    pressureInfo,
+    pressureUnits,
+} from "../convertionTypes/pressure/converter";
+
 import {
     kelvin2units,
     units2kelvin,
@@ -17,6 +25,12 @@ const config = {
         main2secondary: turns2units,
         secondary2main: units2turns,
         additionalInfo: angleInfo,
+    },
+    pressure: {
+        units: pressureUnits,
+        main2secondary: pascal2units,
+        secondary2main: units2pascal,
+        additionalInfo: pressureInfo,
     },
     temperature: {
         units: temperatureUnits,
