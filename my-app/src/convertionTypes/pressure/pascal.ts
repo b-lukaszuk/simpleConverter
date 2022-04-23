@@ -8,7 +8,7 @@ const PASCALMAX: number = 1e12;
 
 function pascal2atm(pascal: number): number {
     return convertIfInRange(pascal,
-        (p: number): number => p / 9.8692 / 1e6,
+        (p: number): number => p * (9.8692 / 1e6),
         PASCALMIN, PASCALMAX);
 }
 
@@ -20,14 +20,14 @@ function pascal2bar(pascal: number): number {
 
 function pascal2psi(pascal: number): number {
     return convertIfInRange(pascal,
-        (p: number): number => p / 1.45038 / 1e4,
+        (p: number): number => p * (1.45038 / 1e4),
         PASCALMIN, PASCALMAX);
 }
 
 // torr (mm/hg)
 function pascal2torr(pascal: number): number {
     return convertIfInRange(pascal,
-        (p: number): number => p / 7.5006 / 1e3,
+        (p: number): number => p * (7.5006 / 1e3),
         PASCALMIN, PASCALMAX);
 }
 
