@@ -32,7 +32,7 @@ const App: React.FC = (): ReactElement<HTMLElement> => {
             <h1>Simple Converter</h1>
             <p className="warning">No guarantee of correct conversion</p>
             <p className="warning">Use it at your own risk</p>
-            <p>(Although it should work fine)</p>
+            <p>(Although it should work fine. Still, I expect some rounding errors)</p>
             <hr />
             <p>Select conversion type:</p>
             <select value={convChoice} onChange={handleConvertionChange}>
