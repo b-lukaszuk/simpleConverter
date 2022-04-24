@@ -6,7 +6,7 @@ const TORRMAX: number = pascal2torr(PASCALMAX);
 
 function torr2pascal(torr: number): number {
     return convertIfInRange(torr,
-        (a: number): number => a * 133,
+        (a: number): number => a * 133.3223684211,
         TORRMIN, TORRMAX);
 }
 

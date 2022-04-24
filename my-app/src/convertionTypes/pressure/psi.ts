@@ -6,7 +6,7 @@ const PSIMAX: number = pascal2psi(PASCALMAX);
 
 function psi2pascal(psi: number): number {
     return convertIfInRange(psi,
-        (a: number): number => a * 6894.76,
+        (a: number): number => a * 6894.75729,
         PSIMIN, PSIMAX);
 }
 
