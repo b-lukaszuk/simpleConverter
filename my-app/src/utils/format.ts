@@ -18,7 +18,7 @@ function groupByNChars(
 function formatNum(
     someNum: number,
     round: number = 3,
-    sepChar: string = " "
+    sepChar: string = "'"
 ): string {
     if (isNaN(someNum)) {
         return "NaN";
