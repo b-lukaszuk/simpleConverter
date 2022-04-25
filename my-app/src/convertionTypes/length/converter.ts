@@ -4,9 +4,9 @@ import { inch2metre } from "./inch";
 import { km2metre } from "./km";
 import { landMile2metre } from "./landMile";
 import { league2metre } from "./league";
-import { metre2cm, metre2foot, metre2inch, metre2km, metre2landMile, metre2league, metre2mm, metre2seeMile, metre2yard } from "./metre";
+import { metre2cm, metre2foot, metre2inch, metre2km, metre2landMile, metre2league, metre2mm, metre2seaMile, metre2yard } from "./metre";
 import { mm2metre } from "./mm";
-import { seeMile2metre } from "./seeMile";
+import { seaMile2metre } from "./seaMile";
 import { yard2metre } from "./yard";
 
 import selectChoice from "../../interfaces/selectChoice";
@@ -27,8 +27,8 @@ function metre2units(howMany: number, units: string): number {
             return metre2league(howMany);
         case "mm":
             return metre2mm(howMany);
-        case "see mile":
-            return metre2seeMile(howMany);
+        case "sea mile":
+            return metre2seaMile(howMany);
         case "yard":
             return metre2yard(howMany);
         case "metre":
@@ -54,8 +54,8 @@ function units2metre(howMany: number, units: string): number {
             return league2metre(howMany);
         case "mm":
             return mm2metre(howMany);
-        case "see mile":
-            return seeMile2metre(howMany);
+        case "sea mile":
+            return seaMile2metre(howMany);
         case "yard":
             return yard2metre(howMany);
         case "metre":
@@ -74,7 +74,7 @@ const lengthUnits: selectChoice[] = [
     { id: 5, name: "league" },
     { id: 6, name: "metre" },
     { id: 7, name: "mm" },
-    { id: 8, name: "see mile" },
+    { id: 8, name: "sea mile" },
     { id: 9, name: "yard" },
 ]
 

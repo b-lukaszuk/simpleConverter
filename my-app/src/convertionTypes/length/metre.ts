@@ -67,7 +67,7 @@ function metre2mm(metre: number): number {
     );
 }
 
-function metre2seeMile(metre: number): number {
+function metre2seaMile(metre: number): number {
     return convertIfInRange(
         metre,
         (m: number): number => m / 1852,
@@ -95,6 +95,6 @@ export {
     metre2landMile,
     metre2league,
     metre2mm,
-    metre2seeMile,
+    metre2seaMile,
     metre2yard,
 };
