@@ -23,12 +23,12 @@ function formatNum(
     if (isNaN(someNum)) {
         return "NaN";
     }
-    let results: string[] = someNum.toFixed(round).split(".");
-    return (
+    let results: string[] = Math.abs(someNum).toFixed(round).split(".");
+    let result: string =
         groupByNChars(results[0], 3, sepChar) +
         "." +
-        groupByNChars(results[1], 3, sepChar)
-    );
+        groupByNChars(results[1], 3, sepChar);
+    return someNum < 0 ? "-" + result : result;
 }
 
 export default formatNum;
