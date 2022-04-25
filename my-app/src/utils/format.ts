@@ -1,4 +1,4 @@
-// groups digits (in string) by 3 (or less if no equal division) from right
+// groups digits (in string) by nChars (or less if no equal division) from right
 function groupByNChars(
     text: string,
     nChar: number = 3,
