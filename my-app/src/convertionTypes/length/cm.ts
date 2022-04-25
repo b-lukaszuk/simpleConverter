@@ -6,7 +6,7 @@ const CMMAX: number = metre2cm(METREMAX);
 
 function cm2metre(cm: number): number {
     return convertIfInRange(cm,
-        (c: number): number => c / 1e3,
+        (c: number): number => c / 1e2,
         CMMIN, CMMAX);
 }
 

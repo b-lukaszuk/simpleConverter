@@ -79,7 +79,7 @@ function metre2seeMile(metre: number): number {
 function metre2yard(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 0.9144,
+        (m: number): number => m / 0.9144,
         METREMIN,
         METREMAX
     );
