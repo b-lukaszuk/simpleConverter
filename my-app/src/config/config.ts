@@ -6,6 +6,13 @@ import {
 } from "../convertionTypes/angle/converter";
 
 import {
+    metre2units,
+    units2metre,
+    lengthInfo,
+    lengthUnits,
+} from "../convertionTypes/length/converter";
+
+import {
     pascal2units,
     units2pascal,
     pressureInfo,
@@ -25,6 +32,12 @@ const config = {
         main2secondary: turns2units,
         secondary2main: units2turns,
         additionalInfo: angleInfo,
+    },
+    length: {
+        units: lengthUnits,
+        main2secondary: metre2units,
+        secondary2main: units2metre,
+        additionalInfo: lengthInfo,
     },
     pressure: {
         units: pressureUnits,
