@@ -37,6 +37,8 @@ Available convertion types:
   + atm, bar, pascal, psi, torr == mmHg
 - temperature
   + celsius, delisle, fahrenheit, kelvin, newton, rankine, réaumur, rømer
+- length
+  + cm, foot, inch, km, land mile, league, metre, mm, see mile, yard
 
 ## Additional Info
 
