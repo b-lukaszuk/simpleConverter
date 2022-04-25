@@ -1,12 +1,16 @@
 // groups digits (in string) by 3 (or less if no equal division) from right
-function groupBy3(text: string, sepChar: string = " "): string {
+function groupByNChars(
+    text: string,
+    nChar: number = 3,
+    sepChar: string = " "
+): string {
     let result: string[] = [];
-    let moduloOfLen: number = text.length % 3;
+    let moduloOfLen: number = text.length % nChar;
     if (moduloOfLen !== 0) {
         result.push(text.slice(0, moduloOfLen));
     }
-    for (let i = moduloOfLen; i < text.length; i += 3) {
-        result.push(text.slice(i, i + 3));
+    for (let i = moduloOfLen; i < text.length; i += nChar) {
+        result.push(text.slice(i, i + nChar));
     }
     return result.join(sepChar);
 }
@@ -16,8 +20,15 @@ function formatNum(
     round: number = 3,
     sepChar: string = " "
 ): string {
+    if (isNaN(someNum)) {
+        return "NaN";
+    }
     let results: string[] = someNum.toFixed(round).split(".");
-    return groupBy3(results[0], sepChar) + "." + groupBy3(results[1], sepChar);
+    return (
+        groupByNChars(results[0], 3, sepChar) +
+        "." +
+        groupByNChars(results[1], 3, sepChar)
+    );
 }
 
 export default formatNum;
