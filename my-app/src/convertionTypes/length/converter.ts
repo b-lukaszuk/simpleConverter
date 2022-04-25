@@ -80,4 +80,4 @@ const lengthUnits: selectChoice[] = [
 
 const lengthInfo: string = "limit: 0-1e15 [metre], SI and imperial/US units";
 
-export { lengthInfo };
+export { lengthInfo, lengthUnits, metre2units, units2metre };
