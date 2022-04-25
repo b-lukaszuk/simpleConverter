@@ -1,6 +1,7 @@
 import React, { ReactElement, useEffect, useState } from "react";
 
 import getOption from "../utils/getOption";
+import formatNum from "../utils/format";
 import selectChoice from "../interfaces/selectChoice";
 
 import "./Converter.css";
@@ -50,7 +51,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
                 {" "}
-                {main2secondary(howManyMainUnits, unit.name).toFixed(4)} [{unit.name}]
+                {formatNum(main2secondary(howManyMainUnits, unit.name))} [{unit.name}]
             </p>
         );
     };
