@@ -65,7 +65,7 @@ function units2metre(howMany: number, units: string): number {
     }
 }
 
-const temperatureUnits: selectChoice[] = [
+const lengthUnits: selectChoice[] = [
     { id: 0, name: "cm" },
     { id: 1, name: "foot" },
     { id: 2, name: "inch" },
