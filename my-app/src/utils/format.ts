@@ -11,4 +11,13 @@ function groupBy3(text: string, sepChar: string = " "): string {
     return result.join(sepChar);
 }
 
-export default groupBy3;
+function formatNum(
+    someNum: number,
+    round: number = 3,
+    sepChar: string = " "
+): string {
+    let results: string[] = someNum.toFixed(round).split(".");
+    return groupBy3(results[0], sepChar) + "." + groupBy3(results[1], sepChar);
+}
+
+export default formatNum;
