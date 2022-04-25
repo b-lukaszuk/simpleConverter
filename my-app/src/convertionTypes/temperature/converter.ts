@@ -20,9 +20,9 @@ function kelvin2units(howMany: number, units: string): number {
             return k2n(howMany);
         case "rankine":
             return k2ra(howMany);
-        case "reaumur":
+        case "réaumur":
             return k2re(howMany);
-        case "romer":
+        case "rømer":
             return k2ro(howMany);
         case "kelvin":
             return howMany;
@@ -43,9 +43,9 @@ function units2kelvin(howMany: number, units: string): number {
             return n2k(howMany);
         case "rankine":
             return ra2k(howMany);
-        case "reaumur":
+        case "réaumur":
             return re2k(howMany);
-        case "romer":
+        case "rømer":
             return ro2k(howMany);
         case "kelvin":
             return howMany;
@@ -61,8 +61,8 @@ const temperatureUnits: selectChoice[] = [
     { id: 3, name: "kelvin" },
     { id: 4, name: "newton" },
     { id: 5, name: "rankine" },
-    { id: 6, name: "reaumur" },
-    { id: 7, name: "romer" },
+    { id: 6, name: "réaumur" },
+    { id: 7, name: "rømer" },
 ]
 
 const temperatureInfo: string = "limit: 0-1e8 [kelvin], limit in Physics: 0-Math.pow(10,32) [kelvin]";
