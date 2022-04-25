@@ -7,15 +7,16 @@ const METREMAX: number = 1e15;
 function metre2cm(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m / 1e2,
+        (m: number): number => m * 1e2,
         METREMIN,
         METREMAX
     );
 }
+
 function metre2foot(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 30.48,
+        (m: number): number => m * 1e2 / 30.48,
         METREMIN,
         METREMAX
     );
@@ -24,7 +25,7 @@ function metre2foot(metre: number): number {
 function metre2inch(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 2.54,
+        (m: number): number => m * 1e2 / 2.54,
         METREMIN,
         METREMAX
     );
@@ -33,7 +34,7 @@ function metre2inch(metre: number): number {
 function metre2km(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 1e3,
+        (m: number): number => m / 1e3,
         METREMIN,
         METREMAX
     );
@@ -42,7 +43,7 @@ function metre2km(metre: number): number {
 function metre2landMile(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 1609.344,
+        (m: number): number => m / 1609.344,
         METREMIN,
         METREMAX
     );
@@ -51,7 +52,7 @@ function metre2landMile(metre: number): number {
 function metre2league(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 5556,
+        (m: number): number => m / 5556,
         METREMIN,
         METREMAX
     );
@@ -60,7 +61,7 @@ function metre2league(metre: number): number {
 function metre2mm(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m / 1e3,
+        (m: number): number => m * 1e3,
         METREMIN,
         METREMAX
     );
@@ -69,7 +70,7 @@ function metre2mm(metre: number): number {
 function metre2seeMile(metre: number): number {
     return convertIfInRange(
         metre,
-        (m: number): number => m * 1852,
+        (m: number): number => m / 1852,
         METREMIN,
         METREMAX
     );
