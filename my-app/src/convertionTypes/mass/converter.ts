@@ -1,15 +1,24 @@
+import { g2kg } from "./g";
+import { kg2g, kg2mg, kg2ounce, kg2pound, kg2tonne } from "./kg";
+import { mg2kg } from "./mg";
+import { ounce2kg } from "./ounce";
+import { pound2kg } from "./pound";
+import { tonne2kg } from "./tonne";
+
 import selectChoice from "../../interfaces/selectChoice";
 
-// main unit: kg
-// secondary units:
-// SI: mg, g, tonne,
-// imperial/US: pound (lb), ounce (oz)
-
-// todo
 function kg2units(howMany: number, units: string): number {
     switch (units) {
         case "g":
-            return NaN;
+            return kg2g(howMany);
+        case "mg":
+            return kg2mg(howMany);
+        case "ounce":
+            return kg2ounce(howMany);
+        case "pound":
+            return kg2pound(howMany);
+        case "tonne":
+            return kg2tonne(howMany);
         case "kg":
             return howMany;
         default:
@@ -17,11 +26,20 @@ function kg2units(howMany: number, units: string): number {
     }
 }
 
-// todo
 function units2kg(howMany: number, units: string): number {
     switch (units) {
         case "g":
-            return NaN;
+            return g2kg(howMany);
+        case "mg":
+            return mg2kg(howMany);
+        case "ounce":
+            return ounce2kg(howMany);
+        case "pound":
+            return pound2kg(howMany);
+        case "tonne":
+            return tonne2kg(howMany);
+        case "kg":
+            return howMany;
         default:
             return NaN;
     }
