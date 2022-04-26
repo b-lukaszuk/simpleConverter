@@ -34,7 +34,7 @@ function kg2ounce(kg: number): number {
 function kg2pound(kg: number): number {
     return convertIfInRange(
         kg,
-        (k: number): number => k * 0.45359237,
+        (k: number): number => k / 0.45359237,
         KGMIN,
         KGMAX
     );
