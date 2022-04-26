@@ -54,6 +54,6 @@ const massUnits: selectChoice[] = [
     { id: 5, name: "tonne" },
 ]
 
-const massInfo: string = "limit: 0-1e15 [kg], SI and imperial/US units";
+const massInfo: string = "limit: 0-1e15 [kg], SI and imperial/US units, [ounce] == [oz], [pound] = [lb]";
 
 export { massInfo, massUnits, kg2units, units2kg };
