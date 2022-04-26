@@ -6,6 +6,13 @@ import {
 } from "../convertionTypes/angle/converter";
 
 import {
+    kg2units,
+    units2kg,
+    massInfo,
+    massUnits,
+} from "../convertionTypes/mass/converter";
+
+import {
     metre2units,
     units2metre,
     lengthInfo,
@@ -32,6 +39,12 @@ const config = {
         main2secondary: turns2units,
         secondary2main: units2turns,
         additionalInfo: angleInfo,
+    },
+    mass: {
+        units: massUnits,
+        main2secondary: kg2units,
+        secondary2main: units2kg,
+        additionalInfo: massInfo,
     },
     length: {
         units: lengthUnits,
