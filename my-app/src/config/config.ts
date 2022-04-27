@@ -27,6 +27,13 @@ import {
 } from "../convertionTypes/pressure/converter";
 
 import {
+    mPerSec2units,
+    units2mPerSec,
+    speedUnits,
+    speedInfo,
+} from "../convertionTypes/speed/converter";
+
+import {
     kelvin2units,
     units2kelvin,
     temperatureUnits,
@@ -57,6 +64,12 @@ const config = {
         main2secondary: pascal2units,
         secondary2main: units2pascal,
         additionalInfo: pressureInfo,
+    },
+    speed: {
+        units: speedUnits,
+        main2secondary: mPerSec2units,
+        secondary2main: units2mPerSec,
+        additionalInfo: speedInfo,
     },
     temperature: {
         units: temperatureUnits,
