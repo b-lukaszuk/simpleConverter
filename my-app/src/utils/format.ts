@@ -17,17 +17,18 @@ function groupByNChars(
 
 function formatNum(
     someNum: number,
-    round: number = 3,
-    sepChar: string = "'"
+    thousandSep: string = "'",
+    decimalSep: string = ".",
+    numOfDecimChars: number = 3
 ): string {
     if (isNaN(someNum)) {
         return "NaN";
     }
-    let results: string[] = Math.abs(someNum).toFixed(round).split(".");
+    let results: string[] = Math.abs(someNum).toFixed(numOfDecimChars).split(".");
     let result: string =
-        groupByNChars(results[0], 3, sepChar) +
-        "." +
-        groupByNChars(results[1], 3, sepChar);
+        groupByNChars(results[0], 3, thousandSep) +
+        decimalSep +
+        groupByNChars(results[1], 3, thousandSep);
     return someNum < 0 ? "-" + result : result;
 }
 
