@@ -19,12 +19,12 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
     const secondary2main: Function = props.secondary2main;
     const additionalInfo: string = props.additionalInfo;
 
-    const [input, setInput] = useState("0");
+    const [inputDigits, setInputDigits] = useState("0");
     const [inUnits, setInUnits] = useState(units[0].name);
     const [howManyMainUnits, setHowManyMainUnits] = useState(0);
 
-    const handleTyping = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setInput(event.target.value);
+    const handleTypingDigits = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setInputDigits(event.target.value);
     };
 
     const handleOption = (event: React.ChangeEvent<HTMLSelectElement>): void => {
@@ -33,14 +33,14 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
 
     useEffect(() => {
         const handleConversion = (): void => {
-            setHowManyMainUnits(secondary2main(parseFloat(input), inUnits));
+            setHowManyMainUnits(secondary2main(parseFloat(inputDigits), inUnits));
         };
         handleConversion();
-    }, [howManyMainUnits, secondary2main, input, inUnits]);
+    }, [howManyMainUnits, secondary2main, inputDigits, inUnits]);
 
     useEffect(() => {
         const setDefaults = (): void => {
-            setInput("0");
+            setInputDigits("0");
             setHowManyMainUnits(0);
             setInUnits(units[0].name);
         };
@@ -66,8 +66,8 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
                 maxLength={15}
                 name=""
                 type="text"
-                value={input}
-                onChange={handleTyping}
+                value={inputDigits}
+                onChange={handleTypingDigits}
             />
             <p>
                 (red border: incorrect input - may produce incorrect output/'NaN')
