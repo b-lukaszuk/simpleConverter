@@ -70,11 +70,9 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
                 onChange={handleTyping}
             />
             <p>
-                (red border: incorrect input that may produce incorrect output or 'NaN')
-            </p>
-            <p>
-                (exceeding conversion limit may produce incorrect output: 'NaN' are
-                displayed)
+                (red border: incorrect input - may produce incorrect output/'NaN')
+                <br />
+                (exceeding conversion limit - may produce incorrect output/'NaN')
             </p>
             <p>Choose input units:</p>
             <select value={inUnits} onChange={handleOption}>

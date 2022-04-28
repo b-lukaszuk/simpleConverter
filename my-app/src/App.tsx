@@ -30,9 +30,8 @@ const App: React.FC = (): ReactElement<HTMLElement> => {
     return (
         <div className="App">
             <h1>Simple Converter</h1>
-            <p className="warning">No guarantee of correct conversion</p>
-            <p className="warning">Use it at your own risk</p>
-            <p>(Although it should work fine. Still, I expect some rounding errors)</p>
+            <p className="warning">No guarantee of correct conversion. Use it at your own risk</p>
+            <p>(It should work fine. Some rounding errors are to be expected)</p>
             <hr />
             <p>Select conversion type:</p>
             <select value={convChoice} onChange={handleConvertionChange}>
