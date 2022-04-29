@@ -23,19 +23,25 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
     const [inUnits, setInUnits] = useState(units[0].name);
     const [howManyMainUnits, setHowManyMainUnits] = useState(0);
 
-    const handleTypingDigits = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleTypingDigits = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ): void => {
         setInputDigits(event.target.value);
     };
 
     const [inputThousandSep, setInputThousandSep] = useState(",");
-    const handleTypingThousandSep = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleTypingThousandSep = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ): void => {
         setInputThousandSep(event.target.value);
-    }
+    };
 
     const [inputDecimalSep, setInputDecimalSep] = useState(".");
-    const handleTypingDecimalSep = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleTypingDecimalSep = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ): void => {
         setInputDecimalSep(event.target.value);
-    }
+    };
 
     const handleOption = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         setInUnits(event.target.value);
@@ -46,7 +52,14 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
             setHowManyMainUnits(secondary2main(parseFloat(inputDigits), inUnits));
         };
         handleConversion();
-    }, [howManyMainUnits, secondary2main, inputDigits, inUnits, inputThousandSep, inputDecimalSep]);
+    }, [
+        howManyMainUnits,
+        secondary2main,
+        inputDigits,
+        inUnits,
+        inputThousandSep,
+        inputDecimalSep,
+    ]);
 
     useEffect(() => {
         const setDefaults = (): void => {
@@ -61,7 +74,12 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
                 {" "}
-                {formatNum(main2secondary(howManyMainUnits, unit.name), inputThousandSep, inputDecimalSep)} [{unit.name}]
+                {formatNum(
+                    main2secondary(howManyMainUnits, unit.name),
+                    inputThousandSep,
+                    inputDecimalSep
+                )}{" "}
+                [{unit.name}]
             </p>
         );
     };
@@ -89,15 +107,23 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
                 {units.map((unit) => getOption(unit))}
             </select>
             <p>{additionalInfo}</p>
-            Thousand separator: <input id="thousandSep" name="thousandSep"
+            Thousand separator:{" "}
+            <input
+                id="thousandSep"
+                name="thousandSep"
                 type="text"
-                maxLength={1} size={1}
+                maxLength={1}
+                size={1}
                 value={inputThousandSep}
                 onChange={handleTypingThousandSep}
-            /> &nbsp;
-            Decimal separator: <input id="decimalSep" name="decimalSep"
+            />{" "}
+            &nbsp; Decimal separator:{" "}
+            <input
+                id="decimalSep"
+                name="decimalSep"
                 type="text"
-                maxLength={1} size={1}
+                maxLength={1}
+                size={1}
                 value={inputDecimalSep}
                 onChange={handleTypingDecimalSep}
             />
