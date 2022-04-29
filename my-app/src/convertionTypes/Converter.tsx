@@ -29,11 +29,11 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         setInputDigits(event.target.value);
     };
 
-    const [inputThousandSep, setInputThousandSep] = useState(",");
-    const handleTypingThousandSep = (
+    const [inputThousandsSep, setInputThousandsSep] = useState(",");
+    const handleTypingThousandsSep = (
         event: React.ChangeEvent<HTMLInputElement>
     ): void => {
-        setInputThousandSep(event.target.value);
+        setInputThousandsSep(event.target.value);
     };
 
     const [inputDecimalSep, setInputDecimalSep] = useState(".");
@@ -57,7 +57,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         secondary2main,
         inputDigits,
         inUnits,
-        inputThousandSep,
+        inputThousandsSep,
         inputDecimalSep,
     ]);
 
@@ -76,7 +76,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
                 {" "}
                 {formatNum(
                     main2secondary(howManyMainUnits, unit.name),
-                    inputThousandSep,
+                    inputThousandsSep,
                     inputDecimalSep
                 )}{" "}
                 [{unit.name}]
@@ -107,15 +107,15 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
                 {units.map((unit) => getOption(unit))}
             </select>
             <p>{additionalInfo}</p>
-            Thousand separator:{" "}
+            Thousands separator:{" "}
             <input
-                id="thousandSep"
-                name="thousandSep"
+                id="thousandsSep"
+                name="thousandsSep"
                 type="text"
                 maxLength={1}
                 size={1}
-                value={inputThousandSep}
-                onChange={handleTypingThousandSep}
+                value={inputThousandsSep}
+                onChange={handleTypingThousandsSep}
             />{" "}
             &nbsp; Decimal separator:{" "}
             <input
