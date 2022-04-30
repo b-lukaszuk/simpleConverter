@@ -16,7 +16,7 @@
 [Go to: Table of contents](#table-of-contents)
 
 **No guarantee of correct conversion. Use it at your own risk**
-(Although it should work fine)
+(Still, I hope it would work fine)
 
 ## Deployed Version
 
@@ -33,12 +33,16 @@ Deployment based on tips from [There](https://dev.to/yuribenjamin/how-to-deploy-
 Available convertion types:
 - angle
   + degree, gradian, mil, radian, turn
-- pressure
-  + atm, bar, pascal, psi, torr == mmHg
-- temperature
-  + celsius, delisle, fahrenheit, kelvin, newton, rankine, réaumur, rømer
 - length
   + cm, foot, inch, km, land mile, league, metre, mm, see mile, yard
+- mass
+  + g, kg, mg, ounce, pound, tonne
+- pressure
+  + atm, bar, pascal, psi, torr == mmHg
+- speed
+  + Ma, ft/s, knot, m/s, km/h, mph
+- temperature
+  + celsius, delisle, fahrenheit, kelvin, newton, rankine, réaumur, rømer
 
 ## Additional Info
 
