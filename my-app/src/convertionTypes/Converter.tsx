@@ -2,9 +2,8 @@ import React, { ReactElement, useEffect, useState } from "react";
 
 import getOption from "../utils/getOption";
 import formatNum from "../utils/format";
+import InputElt from "./uiComponents/InputElt";
 import selectChoice from "../interfaces/selectChoice";
-
-import "./Converter.css";
 
 interface Props {
     units: selectChoice[];
@@ -87,16 +86,12 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
     return (
         <div>
             <hr />
-            <p>Type some number (allowed chars: digits, period, -, +)</p>
-            <input
+            <InputElt id="digitsInput"
+                label="Type some number (allowed chars: digits, period, -, +)"
+                labelBr={true}
                 pattern="[-+]{0,1}[0-9]+\.{0,1}[0-9]{0,}"
-                placeholder="0.00"
-                maxLength={15}
-                name=""
-                type="text"
-                value={inputDigits}
-                onChange={handleTypingDigits}
-            />
+                placeholder="0.00" length={15} size={15}
+                value={inputDigits} changeHandler={handleTypingDigits} />
             <p>
                 (red border: incorrect input - may produce incorrect output/'NaN')
                 <br />
@@ -107,26 +102,14 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
                 {units.map((unit) => getOption(unit))}
             </select>
             <p>{additionalInfo}</p>
-            Thousands separator:{" "}
-            <input
-                id="thousandsSep"
-                name="thousandsSep"
-                type="text"
-                maxLength={1}
-                size={1}
+            <InputElt id="thousandsSep"
+                label="Thousands separator" length={1} size={1}
                 value={inputThousandsSep}
-                onChange={handleTypingThousandsSep}
-            />{" "}
-            &nbsp; Decimal separator:{" "}
-            <input
-                id="decimalSep"
-                name="decimalSep"
-                type="text"
-                maxLength={1}
-                size={1}
+                changeHandler={handleTypingThousandsSep} />
+            <InputElt id="decimalSep"
+                label="Decimal separator" length={1} size={1}
                 value={inputDecimalSep}
-                onChange={handleTypingDecimalSep}
-            />
+                changeHandler={handleTypingDecimalSep} />
             <h2>&#187;</h2>
             <div>{units.map((u) => getOutput(u))}</div>
         </div>
