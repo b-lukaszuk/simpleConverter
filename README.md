@@ -15,8 +15,8 @@
 
 [Go to: Table of contents](#table-of-contents)
 
-**No guarantee of correct conversion. Use it at your own risk**
-(Still, I hope it would work fine)
+**NO GUARANTEE OF PROPER FUNCTIONING OR CORRECT CONVERSION. USE IT AT YOUR OWN RISK**
+(Still, I hope it will work fine. Rounding errors are possible)
 
 ## Deployed Version
 
