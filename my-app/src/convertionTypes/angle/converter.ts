@@ -1,5 +1,5 @@
 import Angle from "./Angle";
-import selectChoice from "../../interfaces/selectChoice";
+import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function turns2units(howMany: number, units: string): number {
     let angle: Angle = new Angle(howMany);
@@ -12,7 +12,7 @@ function units2turns(howMany: number, units: string): number {
     return angle.getAngleInUnits("turn");
 }
 
-const angleUnits: selectChoice[] = [
+const angleUnits: ISelectChoice[] = [
     { id: 0, name: "degree" },
     { id: 1, name: "gradian" },
     { id: 2, name: "mil" },

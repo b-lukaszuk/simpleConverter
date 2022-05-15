@@ -3,20 +3,20 @@ import React, { ReactElement, useState } from "react";
 import Converter from "./convertionTypes/Converter";
 import config from "./config/config";
 import getOption from "./utils/getOption";
-import selectChoice from "./interfaces/selectChoice";
+import ISelectChoice from "./interfaces/ISelectChoice";
 
 import "./App.css";
 
 const App: React.FC = (): ReactElement<HTMLElement> => {
-    const getConvertionChoices = (config: Object): selectChoice[] => {
-        let result: selectChoice[] = [];
+    const getConvertionChoices = (config: Object): ISelectChoice[] => {
+        let result: ISelectChoice[] = [];
         let keys: string[] = Object.keys(config);
         for (let i = 0; i < keys.length; i++) {
             result.push({ id: i, name: keys[i] });
         }
         return result;
     };
-    const convertions: selectChoice[] = getConvertionChoices(config);
+    const convertions: ISelectChoice[] = getConvertionChoices(config);
     const [convChoice, setConvChoice]: [string, Function] = useState(
         convertions[0].name
     );

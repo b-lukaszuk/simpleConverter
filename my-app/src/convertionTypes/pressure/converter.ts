@@ -4,7 +4,7 @@ import { pascal2atm, pascal2bar, pascal2psi, pascal2torr } from "./pascal";
 import { psi2pascal } from "./psi";
 import { torr2pascal } from "./torr";
 
-import selectChoice from "../../interfaces/selectChoice";
+import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function pascal2units(howMany: number, units: string): number {
     switch (units) {
@@ -42,7 +42,7 @@ function units2pascal(howMany: number, units: string): number {
 
 const pressureInfo: string = "limit: 0-1e12 [pascal], [torr] == [mmHg]";
 
-const pressureUnits: selectChoice[] = [
+const pressureUnits: ISelectChoice[] = [
     { id: 0, name: "atm" },
     { id: 1, name: "bar" },
     { id: 2, name: "pascal" },

@@ -6,7 +6,7 @@ import { n2k } from "./newton";
 import { ra2k } from "./rankine";
 import { re2k } from "./reaumur";
 import { ro2k } from "./romer";
-import selectChoice from "../../interfaces/selectChoice";
+import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function kelvin2units(howMany: number, units: string): number {
     switch (units) {
@@ -54,7 +54,7 @@ function units2kelvin(howMany: number, units: string): number {
     }
 }
 
-const temperatureUnits: selectChoice[] = [
+const temperatureUnits: ISelectChoice[] = [
     { id: 0, name: "celsius" },
     { id: 1, name: "delisle" },
     { id: 2, name: "fahrenheit" },

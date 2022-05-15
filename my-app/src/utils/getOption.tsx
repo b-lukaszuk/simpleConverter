@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import selectChoice from "../interfaces/selectChoice";
+import ISelectChoice from "../interfaces/ISelectChoice";
 
-const getOption = (unit: selectChoice): ReactElement<HTMLElement> => {
+const getOption = (unit: ISelectChoice): ReactElement<HTMLElement> => {
     return (
         <option key={unit.id} value={unit.name}>
             {unit.name}

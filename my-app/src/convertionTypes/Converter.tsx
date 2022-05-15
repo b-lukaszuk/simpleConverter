@@ -3,17 +3,17 @@ import React, { ReactElement, useEffect, useState } from "react";
 import getOption from "../utils/getOption";
 import formatNum from "../utils/format";
 import InputElt from "./uiComponents/InputElt";
-import selectChoice from "../interfaces/selectChoice";
+import ISelectChoice from "../interfaces/ISelectChoice";
 
 interface Props {
-    units: selectChoice[];
+    units: ISelectChoice[];
     main2secondary: Function;
     secondary2main: Function;
     additionalInfo: string;
 }
 
 const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
-    const units: selectChoice[] = props.units;
+    const units: ISelectChoice[] = props.units;
     const main2secondary: Function = props.main2secondary;
     const secondary2main: Function = props.secondary2main;
     const additionalInfo: string = props.additionalInfo;
@@ -69,7 +69,7 @@ const Converter: React.FC<Props> = (props): ReactElement<HTMLElement> => {
         setDefaults();
     }, [units]);
 
-    const getOutput = (unit: selectChoice): ReactElement<HTMLElement> => {
+    const getOutput = (unit: ISelectChoice): ReactElement<HTMLElement> => {
         return (
             <p key={unit.id}>
                 {" "}

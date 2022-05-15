@@ -5,7 +5,7 @@ import { ounce2kg } from "./ounce";
 import { pound2kg } from "./pound";
 import { tonne2kg } from "./tonne";
 
-import selectChoice from "../../interfaces/selectChoice";
+import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function kg2units(howMany: number, units: string): number {
     switch (units) {
@@ -45,7 +45,7 @@ function units2kg(howMany: number, units: string): number {
     }
 }
 
-const massUnits: selectChoice[] = [
+const massUnits: ISelectChoice[] = [
     { id: 0, name: "g" },
     { id: 1, name: "kg" },
     { id: 2, name: "mg" },

@@ -11,7 +11,7 @@ import {
 } from "./meterPerSecond";
 import { mph2metPerSec } from "./mph";
 
-import selectChoice from "../../interfaces/selectChoice";
+import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function mPerSec2units(howMany: number, units: string): number {
     switch (units) {
@@ -51,7 +51,7 @@ function units2mPerSec(howMany: number, units: string): number {
     }
 }
 
-const speedUnits: selectChoice[] = [
+const speedUnits: ISelectChoice[] = [
     { id: 0, name: "Ma" },
     { id: 1, name: "ft/s" },
     { id: 2, name: "knot" },

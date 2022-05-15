@@ -9,7 +9,7 @@ import { mm2metre } from "./mm";
 import { seaMile2metre } from "./seaMile";
 import { yard2metre } from "./yard";
 
-import selectChoice from "../../interfaces/selectChoice";
+import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function metre2units(howMany: number, units: string): number {
     switch (units) {
@@ -65,7 +65,7 @@ function units2metre(howMany: number, units: string): number {
     }
 }
 
-const lengthUnits: selectChoice[] = [
+const lengthUnits: ISelectChoice[] = [
     { id: 0, name: "cm" },
     { id: 1, name: "foot" },
     { id: 2, name: "inch" },
