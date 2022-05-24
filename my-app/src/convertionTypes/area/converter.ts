@@ -12,7 +12,7 @@ import { yardSq2metreSq } from "./yardSq";
 
 import ISelectChoice from "../../interfaces/ISelectChoice";
 
-function metre2units(howMany: number, units: string): number {
+function metreSq2units(howMany: number, units: string): number {
     switch (units) {
         case "acre":
             return metreSq2acre(howMany);
@@ -41,7 +41,7 @@ function metre2units(howMany: number, units: string): number {
     }
 }
 
-function units2metre(howMany: number, units: string): number {
+function units2metreSq(howMany: number, units: string): number {
     switch (units) {
         case "acre":
             return acre2metreSq(howMany);
@@ -70,7 +70,7 @@ function units2metre(howMany: number, units: string): number {
     }
 }
 
-const lengthUnits: ISelectChoice[] = [
+const areaUnits: ISelectChoice[] = [
     { id: 0, name: "acre" },
     { id: 1, name: "are" },
     { id: 3, name: "hectare" },
@@ -86,4 +86,4 @@ const lengthUnits: ISelectChoice[] = [
 
 const areaInfo: string = "limit: 0-1e15 [square metre], SI and imperial/US units";
 
-export { areaInfo, lengthUnits, metre2units, units2metre };
+export { areaInfo, areaUnits, metreSq2units, units2metreSq };
