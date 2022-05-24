@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 
 import Converter from "./convertionTypes/Converter";
 import config from "./config/config";
@@ -26,6 +26,10 @@ const App: React.FC = (): ReactElement<HTMLElement> => {
     ): void => {
         setConvChoice(event.target.value);
     };
+
+    useEffect(() => {
+        setConvChoice("angle");
+    }, [])
 
     return (
         <div className="App">
