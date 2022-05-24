@@ -29,11 +29,12 @@ const App: React.FC = (): ReactElement<HTMLElement> => {
 
     useEffect(() => {
         setConvChoice("angle");
+        document.title = "Simple Units Converter";
     }, [])
 
     return (
         <div className="App">
-            <h1>Simple Converter</h1>
+            <h1>Simple Units Converter</h1>
             <p className="warning">NO GUARANTEE OF CORRECT CONVERSION. USE IT AT YOUR OWN RISK</p>
             <p>(Still, I hope it will work fine. Some rounding errors are possible)</p>
             <hr />
