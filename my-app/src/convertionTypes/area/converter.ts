@@ -34,7 +34,7 @@ function metreSq2units(howMany: number, units: string): number {
             return metreSq2seaMileSq(howMany);
         case "square yard":
             return metreSq2yardSq(howMany);
-        case "metre":
+        case "square metre":
             return howMany;
         default:
             return NaN;
@@ -63,7 +63,7 @@ function units2metreSq(howMany: number, units: string): number {
             return seaMileSq2metreSq(howMany);
         case "square yard":
             return yardSq2metreSq(howMany);
-        case "metre":
+        case "square metre":
             return howMany;
         default:
             return NaN;
@@ -73,15 +73,15 @@ function units2metreSq(howMany: number, units: string): number {
 const areaUnits: ISelectChoice[] = [
     { id: 0, name: "acre" },
     { id: 1, name: "are" },
-    { id: 3, name: "hectare" },
-    { id: 4, name: "metre" },
-    { id: 5, name: "square cm" },
-    { id: 6, name: "square foot" },
-    { id: 7, name: "square inch" },
-    { id: 8, name: "square km" },
-    { id: 9, name: "square land mile" },
-    { id: 10, name: "square sea mile" },
-    { id: 11, name: "square yard" },
+    { id: 2, name: "hectare" },
+    { id: 3, name: "square cm" },
+    { id: 4, name: "square foot" },
+    { id: 5, name: "square inch" },
+    { id: 6, name: "square km" },
+    { id: 7, name: "square land mile" },
+    { id: 8, name: "square metre" },
+    { id: 9, name: "square sea mile" },
+    { id: 10, name: "square yard" },
 ]
 
 const areaInfo: string = "limit: 0-1e15 [square metre], SI and imperial/US units";
