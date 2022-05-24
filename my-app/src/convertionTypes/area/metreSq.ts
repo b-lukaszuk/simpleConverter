@@ -4,6 +4,15 @@ const METRESQ2MIN: number = 0;
 const METRESQMAX: number = 1e15;
 
 // mostly based on en.wikipedia + some google searches
+function metreSq2acre(metreSq: number): number {
+    return convertIfInRange(
+        metreSq,
+        (mSq: number): number => mSq * 0.000247105381,
+        METRESQ2MIN,
+        METRESQMAX
+    );
+}
+
 function metreSq2are(metreSq: number): number {
     return convertIfInRange(
         metreSq,
@@ -88,6 +97,7 @@ function metreSq2yardSq(metreSq: number): number {
 export {
     METRESQ2MIN,
     METRESQMAX,
+    metreSq2acre,
     metreSq2are,
     metreSq2cmSq,
     metreSq2footSq,
