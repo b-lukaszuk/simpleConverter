@@ -6,6 +6,13 @@ import {
 } from "../convertionTypes/angle/converter";
 
 import {
+    metreSq2units,
+    units2metreSq,
+    areaUnits,
+    areaInfo,
+} from "../convertionTypes/area/converter";
+
+import {
     kg2units,
     units2kg,
     massInfo,
@@ -46,6 +53,12 @@ const config = {
         main2secondary: turns2units,
         secondary2main: units2turns,
         additionalInfo: angleInfo,
+    },
+    area: {
+        units: areaUnits,
+        main2secondary: metreSq2units,
+        secondary2main: units2metreSq,
+        additionalInfo: areaInfo,
     },
     mass: {
         units: massUnits,
