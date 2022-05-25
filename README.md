@@ -33,6 +33,8 @@ Deployment based on tips from [There](https://dev.to/yuribenjamin/how-to-deploy-
 Available convertion types:
 - angle
   + degree, gradian, mil, radian, turn
+- area
+  + acre, are, hectare, cm<sup>2</sup>, foot<sup>2</sup>, inch<sup>2</sup>, km<sup>2</sup>, land mile<sup>2</sup>, metre<sup>2</sup>, sea mile<sup>2</sup>, yard<sup>2</sup>
 - length
   + cm, foot, inch, km, land mile, league, metre, mm, see mile, yard
 - mass
