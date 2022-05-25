@@ -18,7 +18,7 @@ const angleUnits: ISelectChoice[] = [
     { id: 2, name: "mil" },
     { id: 3, name: "radian" },
     { id: 4, name: "turn" },
-]
+];
 
 const angleInfo: string = "limit: 0-1 [turn], both sides (-/+), angles wrap around 1 [turn]";
 

@@ -63,7 +63,7 @@ const temperatureUnits: ISelectChoice[] = [
     { id: 5, name: "rankine" },
     { id: 6, name: "réaumur" },
     { id: 7, name: "rømer" },
-]
+];
 
 const temperatureInfo: string = "limit: 0-1e8 [kelvin], limit in Physics: 0-Math.pow(10,32) [kelvin]";
 

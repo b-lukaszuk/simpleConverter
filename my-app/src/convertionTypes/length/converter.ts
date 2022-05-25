@@ -76,7 +76,7 @@ const lengthUnits: ISelectChoice[] = [
     { id: 7, name: "mm" },
     { id: 8, name: "sea mile" },
     { id: 9, name: "yard" },
-]
+];
 
 const lengthInfo: string = "limit: 0-1e15 [metre], SI and imperial/US units";
 
