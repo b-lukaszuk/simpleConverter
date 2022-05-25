@@ -61,7 +61,7 @@ function metreSq2inchSq(metreSq: number): number {
 function metreSq2kmSq(metreSq: number): number {
     return convertIfInRange(
         metreSq,
-        (mSq: number): number => mSq / 1e9,
+        (mSq: number): number => mSq / 1e6,
         METRESQMIN,
         METRESQMAX
     );
@@ -88,7 +88,7 @@ function metreSq2seaMileSq(metreSq: number): number {
 function metreSq2yardSq(metreSq: number): number {
     return convertIfInRange(
         metreSq,
-        (mSq: number): number => mSq * 0.83612736,
+        (mSq: number): number => mSq / 0.83612736,
         METRESQMIN,
         METRESQMAX
     );
