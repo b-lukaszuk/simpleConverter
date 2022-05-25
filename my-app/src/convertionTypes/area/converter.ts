@@ -82,8 +82,8 @@ const areaUnits: ISelectChoice[] = [
     { id: 8, name: "square metre" },
     { id: 9, name: "square sea mile" },
     { id: 10, name: "square yard" },
-]
+];
 
-const areaInfo: string = "limit: 0-1e15 [square metre], SI and imperial/US units";
+const areaInfo: string = "limit: 0-1e15 [square metre]";
 
 export { areaInfo, areaUnits, metreSq2units, units2metreSq };
