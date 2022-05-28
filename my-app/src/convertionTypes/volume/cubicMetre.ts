@@ -60,7 +60,7 @@ function cubicMetreToLitre(metre3: number): number {
     );
 }
 
-function cubicMetreToPint(metre3: number): number {
+function cubicMetreToUsPint(metre3: number): number {
     return convertIfInRange(
         metre3,
         (m3: number): number => m3 / 0.000473176473,
@@ -78,5 +78,5 @@ export {
     cubicMetreToCubicInch,
     cubicMetreToUsGallon,
     cubicMetreToLitre,
-    cubicMetreToPint,
+    cubicMetreToUsPint,
 };
