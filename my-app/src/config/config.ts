@@ -101,7 +101,7 @@ const config = {
         units: volumeUnits,
         main2secondary: cubicMeters2units,
         secondary2main: units2cubicMetres,
-        additionalInfo: volumeUnits,
+        additionalInfo: volumeInfo,
     },
 };
 

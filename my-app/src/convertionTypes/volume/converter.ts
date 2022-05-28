@@ -74,7 +74,6 @@ const volumeUnits: ISelectChoice[] = [
     { id: 7, name: "pint (US)" },
 ];
 
-const volumeInfo: string =
-    "limit: 0-1e15 [cubic metre], SI and imperial/US units for fluids, [L] == [dm3], [mL] == [cm3]";
+const volumeInfo: string = "limit: 0-1e15 [cubic metre], SI and imperial/US units for fluids, [L] == [dm3], [mL] == [cm3]";
 
 export { volumeInfo, volumeUnits, cubicMeters2units, units2cubicMetres };
