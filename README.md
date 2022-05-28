@@ -45,6 +45,8 @@ Available convertion types:
   + Ma, ft/s, knot, m/s, km/h, mph
 - temperature
   + celsius, delisle, fahrenheit, kelvin, newton, rankine, réaumur, rømer
+- volume
+  + barrel (US), cm<sup>3</sup>, foot<sup>3</sup>, inch<sup>3</sup>, gallon (US), litre, pint (US), metre<sup>3</sup>
 
 ## Additional Info
 
