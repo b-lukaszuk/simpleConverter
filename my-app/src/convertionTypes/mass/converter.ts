@@ -52,7 +52,7 @@ const massUnits: ISelectChoice[] = [
     { id: 3, name: "ounce" },
     { id: 4, name: "pound" },
     { id: 5, name: "tonne" },
-]
+];
 
 const massInfo: string = "limit: 0-1e15 [kg], SI and imperial/US units, [ounce] == [oz], [pound] = [lb]";
 
