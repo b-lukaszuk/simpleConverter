@@ -33,7 +33,7 @@ function cubicMetreToCubicFoot(metre3: number): number {
     );
 }
 
-function cubicMetreToInch(metre3: number): number {
+function cubicMetreToCubicInch(metre3: number): number {
     return convertIfInRange(
         metre3,
         (m3: number): number => m3 / 0.000016387064,
@@ -75,7 +75,7 @@ export {
     cubicMetreToBarrel,
     cubicMetreToCubicCentimetre,
     cubicMetreToCubicFoot,
-    cubicMetreToInch,
+    cubicMetreToCubicInch,
     cubicMetreToUsGallon,
     cubicMetreToLitre,
     cubicMetreToPint,
