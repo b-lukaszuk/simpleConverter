@@ -1,9 +1,9 @@
-import { barrelToCubicMetre } from "./barrel";
+import { usBarrelToCubicMetre } from "./barrel";
 import { cubicCentimetreToCubicMetre } from "./cubicCentimetre";
 import { cubicFootToCubicMetre } from "./cubicFoot";
 import { cubicInchToCubicMetre } from "./cubicInch";
 import {
-    cubicMetreToBarrel,
+    cubicMetreToUsBarrel,
     cubicMetreToCubicCentimetre,
     cubicMetreToCubicFoot,
     cubicMetreToCubicInch,
@@ -19,8 +19,8 @@ import ISelectChoice from "../../interfaces/ISelectChoice";
 
 function cubicMeters2units(howMany: number, units: string): number {
     switch (units) {
-        case "barrel":
-            return cubicMetreToBarrel(howMany);
+        case "barrel (US)":
+            return cubicMetreToUsBarrel(howMany);
         case "cubic centimetre":
             return cubicMetreToCubicCentimetre(howMany);
         case "cubic foot":
@@ -42,8 +42,8 @@ function cubicMeters2units(howMany: number, units: string): number {
 
 function units2cubicMetres(howMany: number, units: string): number {
     switch (units) {
-        case "barrel":
-            return barrelToCubicMetre(howMany);
+        case "barrel (US)":
+            return usBarrelToCubicMetre(howMany);
         case "cubic centimetre":
             return cubicCentimetreToCubicMetre(howMany);
         case "cubic foot":
@@ -64,7 +64,7 @@ function units2cubicMetres(howMany: number, units: string): number {
 }
 
 const volumeUnits: ISelectChoice[] = [
-    { id: 0, name: "barrel" },
+    { id: 0, name: "barrel (US)" },
     { id: 1, name: "cubic centimetre" },
     { id: 2, name: "cubic foot" },
     { id: 3, name: "cubic inch" },

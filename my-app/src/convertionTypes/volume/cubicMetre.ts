@@ -6,7 +6,7 @@ const CUBMETREMAX: number = 1e15;
 // mostly based on en.wikipedia + some google searches
 
 // fluid barrel
-function cubicMetreToBarrel(metre3: number): number {
+function cubicMetreToUsBarrel(metre3: number): number {
     return convertIfInRange(
         metre3,
         (m3: number): number => m3 / 0.158987294928,
@@ -72,7 +72,7 @@ function cubicMetreToUsPint(metre3: number): number {
 export {
     CUBMETREMIN,
     CUBMETREMAX,
-    cubicMetreToBarrel,
+    cubicMetreToUsBarrel,
     cubicMetreToCubicCentimetre,
     cubicMetreToCubicFoot,
     cubicMetreToCubicInch,
