@@ -63,7 +63,7 @@ function units2cubicMetres(howMany: number, units: string): number {
     }
 }
 
-const lengthUnits: ISelectChoice[] = [
+const volumeUnits: ISelectChoice[] = [
     { id: 0, name: "barrel" },
     { id: 1, name: "cubic centimetre" },
     { id: 2, name: "cubic foot" },
@@ -77,4 +77,4 @@ const lengthUnits: ISelectChoice[] = [
 const volumeInfo: string =
     "limit: 0-1e15 [cubic metre], SI and imperial/US units for fluids, [L] == [dm3], [mL] == [cm3]";
 
-export { volumeInfo, lengthUnits, cubicMeters2units, units2cubicMetres };
+export { volumeInfo, volumeUnits, cubicMeters2units, units2cubicMetres };
