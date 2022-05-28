@@ -47,6 +47,13 @@ import {
     temperatureInfo,
 } from "../convertionTypes/temperature/converter";
 
+import {
+    cubicMeters2units,
+    units2cubicMetres,
+    volumeUnits,
+    volumeInfo,
+} from "../convertionTypes/volume/converter";
+
 const config = {
     angle: {
         units: angleUnits,
@@ -89,6 +96,12 @@ const config = {
         main2secondary: kelvin2units,
         secondary2main: units2kelvin,
         additionalInfo: temperatureInfo,
+    },
+    volume: {
+        units: volumeUnits,
+        main2secondary: cubicMeters2units,
+        secondary2main: units2cubicMetres,
+        additionalInfo: volumeUnits,
     },
 };
 
